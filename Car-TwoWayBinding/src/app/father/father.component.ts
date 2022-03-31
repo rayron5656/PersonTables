@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./father.component.css']
 })
 export class FatherComponent implements OnInit {
+ carTypes:string[] = ['mazda',
+  'toyota',
+  'ford',
+  'skoda',
+  'ferrari',
+  'lamborghini',
+  'jamesbondcar'];
+
+  carSelect:any ='';
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.carTypes);
   }
 
 }

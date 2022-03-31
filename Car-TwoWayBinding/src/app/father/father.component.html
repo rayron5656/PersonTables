@@ -1,1 +1,9 @@
-<p>father works!</p>
+<div class="container">
+    <h2>select a car brand</h2>
+    <select [(ngModel)]="carSelect">
+        <option *ngFor="let c in carTypes" >{{c}}</option>
+    </select>
+    
+    <hr>
+    <app-child></app-child>
+</div>

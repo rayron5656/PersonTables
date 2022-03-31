@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,EventEmitter } from '@angular/core';
+import {Car} from './Car';
 
 @Component({
   selector: 'app-child',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
+
+  
+
+  choosenCar:Car = Car.mazda;
 
   constructor() { }
 
