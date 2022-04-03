@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-father',
@@ -6,20 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./father.component.css']
 })
 export class FatherComponent implements OnInit {
+
  carTypes:string[] = ['mazda',
   'toyota',
   'ford',
   'skoda',
   'ferrari',
   'lamborghini',
-  'jamesbondcar'];
+  'james bond car'];
 
-  carSelect:any ='';
+  @Input() carSelect:string = '';
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.carTypes);
+    
+  }
+  handelChange(){
+    console.log(this.carSelect);
   }
 
 }

@@ -8,9 +8,9 @@ import {Car} from './Car';
 })
 export class ChildComponent implements OnInit {
 
-  
+  @Input() selectedCar:string = '';
 
-  choosenCar:Car = Car.mazda;
+ 
 
   constructor() { }
 

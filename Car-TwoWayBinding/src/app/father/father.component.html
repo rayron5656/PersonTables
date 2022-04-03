@@ -1,9 +1,16 @@
 <div class="container">
     <h2>select a car brand</h2>
-    <select [(ngModel)]="carSelect">
-        <option *ngFor="let c in carTypes" >{{c}}</option>
+    <select (change)="handelChange()" [(ngModel)]="carSelect" name="carselect">
+        
+        <option value="{{carTypes[0]}}">{{carTypes[0]}}</option>
+        <option value="{{carTypes[1]}}">{{carTypes[1]}}</option>
+        <option value="{{carTypes[2]}}">{{carTypes[2]}}</option>
+        <option value="{{carTypes[3]}}">{{carTypes[3]}}</option>
+        <option value="{{carTypes[4]}}">{{carTypes[4]}}</option>
+        <option value="{{carTypes[5]}}">{{carTypes[5]}}</option>
+        <option value="{{carTypes[6]}}">{{carTypes[6]}}</option>
     </select>
-    
+
     <hr>
-    <app-child></app-child>
+    <app-child [selectedCar]="carSelect"></app-child>
 </div>
