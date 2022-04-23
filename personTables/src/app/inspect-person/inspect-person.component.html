@@ -1,0 +1,29 @@
+
+<div class="container">
+    <div class="col-8 offset-2">
+        <div class="row"><h2 hidden="{{person.name.firstname == ''}}">Waiting for data from server...</h2></div>
+        <div class="mb-3 mt-5">
+
+            <label for="formGroupExampleInput" class="form-label">ID:</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" disabled placeholder={{person.id}}>
+            <br>
+            <label for="formGroupExampleInput" class="form-label">Full Name: </label>
+            <input type="text" class="form-control" id="formGroupExampleInput" disabled placeholder="{{person.name.firstname }} {{person.name.lastname}}">
+            <br>
+            <label for="formGroupExampleInput" class="form-label">Address: <strong></strong></label>
+            <input type="text" class="form-control" id="formGroupExampleInput" disabled placeholder="{{person.address.city}} / {{person.address.street}} / {{person.address.zipcode}}">
+            <br>
+            <label for="formGroupExampleInput" class="form-label">Phone number: <strong></strong></label>
+            <input type="text" class="form-control" id="formGroupExampleInput" disabled placeholder="{{person.phone}}">
+            <br>
+            <label for="formGroupExampleInput" class="form-label">User details:</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" disabled placeholder="Username: {{person.username}} / Password: {{person.password}} ">
+            <br>
+            <label for="formGroupExampleInput" class="form-label">Email:</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" disabled placeholder="{{person.email}}">
+            <br>
+            
+        <button class="btn btn-primary float-end" routerLink="">Back</button>
+
+    </div>
+</div>
